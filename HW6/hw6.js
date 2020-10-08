@@ -48,7 +48,8 @@ document.getElementsByTagName("p")[1].style.color = "red";
 document.getElementsByTagName("p")[2].style.textDecoration = "underline";
 document.getElementsByTagName("p")[3].style.fontStyle = "italic";
 document.getElementsByTagName("span")[0].style.visibility = "hidden";
-document.getElementById("myList").style.display = "inline";
+document.getElementById("myList").style.listStyle = "none";
+document.getElementById("myList").style.display = "flex";
 
 //task6
 let inp1 = prompt("Enter a value");
