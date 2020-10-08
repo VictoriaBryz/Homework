@@ -10,7 +10,7 @@ el3.innerHTML = "Last";
 
 
 //task2
-let img = document.getElementById("image");
+let img = document.getElementsByClassName("image")[0];
 img.src = "cat.jpg";
 alert(img.src);
 
