@@ -9,7 +9,8 @@ $("h2.head").find("span.inner").css("font-size", "35px");
 
 //task3
 $("div").each(function(){
-    $(this).insertBefore($(this).prev())
+    const $el = $(this);
+    $el.prev().before($el);
 });
 
 
