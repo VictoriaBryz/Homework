@@ -9,16 +9,18 @@ function upperCase(str){
 
 
 //task2
-/*function checkEmail(str){
-    if(str.match(/\w/)){
+function checkEmail(str){
+    if(str.match(/\S+@\S+\.\S+/)){
         console.log(true);
     }
-}*/
+}
+checkEmail("Qmail2@gmail.com");
 
 
 //task3
-let res  = /(d)b+(d)/gi;
-console.log("cdbBdbsbz".match(res));
+let res  = /d(b+)(d)/i;
+let arr = res.exec("cdbBdbsbz");
+console.log(arr);
 
 
 //task4
@@ -42,7 +44,7 @@ function card(str){
 //task6
 function checkEmail(str){
     if(str.match(/^[a-z0-9]+(\w+)/i)){
-        if(str.match(/(-)+/)){
+        if(str.match(/(-){2}/)){
             console.log("Inorrect");
         }else{
             console.log("Email is correct!");
@@ -52,6 +54,9 @@ function checkEmail(str){
         console.log("Email is not correct!");
     }
 }
+checkEmail('my_mail@gmail.com');
+checkEmail('#my_mail@gmail.com');
+
 
 
 //task7
