@@ -134,8 +134,8 @@ function end(){
         best = JSON.parse(localStorage.getItem("Score"))[i];
       }
     } 
-  ctx.fillText(`Score: ${score}`, canvas.width/2, canvas.height/3);
-  ctx.fillText(`Best score: ${best}`, canvas.width/2, canvas.height/2);
+  let text_score = document.getElementById("score");
+  text_score.innerHTML = `Score: ${score} </br> Best score: ${best} `;
 }
 down.onload = draw;
 
