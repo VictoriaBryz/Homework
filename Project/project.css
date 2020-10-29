@@ -1,0 +1,7 @@
+#canvas {
+    border: black solid 2px;
+}
+
+#restartBtn {
+    visibility: hidden;
+}
