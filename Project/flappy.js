@@ -68,13 +68,9 @@ let state = true;
 function draw(){
   ctx.drawImage(bg, 0, 0);
     for(let i = 0; i < pipe.length; i++){
-      if(state){
-        ctx.drawImage(up, pipe[i].x, pipe[i].y);
-        ctx.drawImage(down, pipe[i].x, pipe[i].y + up.height + a);
-        pipe[i].x--;
-      }else{
-        ctx.drawImage(ground, 0, cnv.height - ground.height);
-      }
+     ctx.drawImage(up, pipe[i].x, pipe[i].y);
+     ctx.drawImage(down, pipe[i].x, pipe[i].y + up.height + a);
+     pipe[i].x--;
 
     if(pipe[i].x == 125){
       pipe.push({
@@ -105,7 +101,11 @@ function draw(){
   ctx.font = "20px Comic Sans MS";
   ctx.textAlign = "left";
   ctx.fillText("Score: " + score, 10, 20);
-  requestAnimationFrame(draw);
+  if(state){
+    requestAnimationFrame(draw);
+  }else{
+    cancelAnimationFrame(draw);
+  }
 }
 
 
@@ -113,8 +113,6 @@ function draw(){
 function end(){
   state = false;
   game_over.play();
-  document.removeEventListener;
-  grav = 0;
   ctx.font = "30px Comic Sans MS";
   ctx.fillStyle = "red";
   ctx.textAlign = "center";
